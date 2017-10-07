@@ -160,7 +160,6 @@ tagpro.ready( function() {
         catch(err) { setTimeout(setUp,50); return;}
 
         if (tagpro.players[tagpro.playerId].flair.description == "Pencil") {
-            console.log('you have the pencil!');
 
             tagpro.players[tagpro.playerId].hasPencil = true;
 
