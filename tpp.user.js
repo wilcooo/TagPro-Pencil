@@ -27,6 +27,9 @@ var colors = [null, 0xFF4444, 0x4444FF];                                        
 // To find the code for your key, go to keycode.info                                  //  //
 var drawKey = 66;                                                                     //  //
                                                                                       //  //
+// Do you want the key to toggle drawing, so you don't have to keep pressing it?      //  //
+var toggle = false;                                                                   //  //
+                                                                                      //  //
 ////////////////////////////////////////////////////////////////////////////////////////  //
 //                                                     ### --- END OF OPTIONS --- ###     //
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -280,6 +283,10 @@ tagpro.ready( function() {
                 switch (key.which) {
                     case drawKey:
                         if (!sendDrawInterval) sendDrawInterval = setInterval(sendDraw,updateTime);
+                        else if (toggle) {
+                            clearInterval(sendDrawInterval);
+                            sendDrawInterval = false;
+                        }
                         break;
                 }
             });
@@ -287,8 +294,10 @@ tagpro.ready( function() {
             $(document).keyup(function(key) {
                 switch (key.which) {
                     case drawKey:
-                        clearInterval(sendDrawInterval);
-                        sendDrawInterval = false;
+                        if (!toggle) {
+                            clearInterval(sendDrawInterval);
+                            sendDrawInterval = false;
+                        }
                         break;
                 }
             });
