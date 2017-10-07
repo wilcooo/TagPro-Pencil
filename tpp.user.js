@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TagPro Pencil
-// @version      0.1
+// @version      0.2
 // @description  Draw with your pencil flair, everyone with the script can see it!
 // @author       Ko
 // @include      http://tagpro-*.koalabeast.com:*
@@ -288,6 +288,7 @@ tagpro.ready( function() {
                 switch (key.which) {
                     case drawKey:
                         clearInterval(sendDrawInterval);
+                        sendDrawInterval = false;
                         break;
                 }
             });
