@@ -197,7 +197,7 @@ tagpro.ready( function() {
                     var keys = ['up','down','left','right'];
 
                     for (var k in keys) {
-                        if (!tagpro.KeyComm.pressedDir[keys[k]])
+                        if (!tagpro.KeyComm.pressedDir[keys[k]] && tagpro.KeyComm.sentDir[keys[k]])
                             tagpro.socket.emit('keyup', {k: keys[k]} );
                     }
                 };
