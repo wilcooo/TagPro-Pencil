@@ -8,7 +8,7 @@
 // @include      http://*.newcompte.fr:*
 // @downloadURL  https://github.com/wilcooo/TagPro-Pencil/raw/master/tpp.user.js
 // @supportURL   https://www.reddit.com/message/compose/?to=Wilcooo
-// @website      https://www.reddit.com/r/TagPro/comments/I-HAVE-NOT-WRITTEN-A-POST-YET
+// @website      https://www.reddit.com/r/TagPro/comments/74r58i/userscript_draw_with_your_pencil_flair_everybally/
 // ==/UserScript==
 
 ////////////////////////////////////////////////////////////////////////////////////////////
