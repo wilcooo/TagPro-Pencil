@@ -281,7 +281,10 @@ tagpro.ready( function() {
             $(document).keydown(function(key) {
                 switch (key.which) {
                     case drawKey:
-                        if (!sendDrawInterval) sendDrawInterval = setInterval(sendDraw,updateTime);
+                        if (!sendDrawInterval) {
+                            sendDraw();
+                            sendDrawInterval = setInterval(sendDraw,updateTime);
+                        }
                         else if (toggle) {
                             clearInterval(sendDrawInterval);
                             sendDrawInterval = false;
