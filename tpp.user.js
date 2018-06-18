@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TagPro Pencil
-// @version      0.2
+// @version      1.1
 // @description  Draw with your pencil flair, everyone with the script can see it!
 // @author       Ko
 // @include      http://tagpro-*.koalabeast.com:*
@@ -125,7 +125,9 @@ tagpro.ready( function() {
 
             var player = tagpro.players[data.id];
 
-            if (!player.hasPencil) {
+            if (player.hasPencil == false) return;
+
+            if (player.hasPencil == undefined) {
                 if (player.hasPencil === undefined && player.flair)
                     player.hasPencil = (player.flair.description == "Pencil");
 
